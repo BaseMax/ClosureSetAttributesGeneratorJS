@@ -54,25 +54,18 @@ const finds = (F, Z) => {
     for (const z of Z) {
         Zp.add(z);
     }
-    // console.log("Zp is: ", Zp);
 
     let something_changed = false;
     do {
-        // console.log("repeat, something_changed is:", something_changed);
         something_changed = false;
         for (const set of F) {
             const from_combinations = getCombinations(set.from);
-            // console.log(from_combinations);
             for (const from_combination of from_combinations) {
-                // console.log("\t", from_combination);
                 for (const Zp_item of Zp) {
-                    // console.log("\t\t", Zp_item);
                     // check if from_combination is a sub set of Zp_item
                     if (from_combination.every(v => Zp_item.includes(v))) {
-                        // console.log("\t\t\t", "OK");
                         for (const to of set.to) {
                             if (Zp.has(to)) continue;
-                            // console.log("\tAdding", to);
                             Zp.add(to);
                             something_changed = true;
                         }
@@ -80,8 +73,7 @@ const finds = (F, Z) => {
                 }
             }
         }
-        // console.log("at last, something_changed is:", something_changed);
-    } while (something_changed === true); // Zp.size !== nodes.size);
+    } while (something_changed === true);
     return Zp;
 };
 

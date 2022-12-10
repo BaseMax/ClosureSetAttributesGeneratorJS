@@ -1,9 +1,9 @@
 /**
  * 
- * @Name: Bastar Sets Features Generator JS
+ * @Name: Closure of a set of Attributes Generator JS
  * @Author: Max Base
  * @Date: 2022/12/05
- * @Repository: https://github.com/BaseMax/BastarSetsFeaturesGenerator
+ * @Repository: https://github.com/BaseMax/ClosureSetAttributesGeneratorJS
  * 
  */
 
